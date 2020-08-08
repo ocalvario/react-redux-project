@@ -3,6 +3,7 @@ class CreateGadgets < ActiveRecord::Migration[6.0]
     create_table :gadgets do |t|
       t.integer :cat_id
       t.string :name
+      t.string :image_url
       t.string :description
       t.string :link
 
