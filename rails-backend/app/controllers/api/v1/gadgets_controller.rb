@@ -1,2 +1,2 @@
-class GadgetsController < ApplicationController
+class Api::V1::GadgetsController < ApplicationController
 end
