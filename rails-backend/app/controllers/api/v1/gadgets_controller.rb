@@ -8,13 +8,17 @@ class Api::V1::GadgetsController < ApplicationController
     end
 
     def show
-        @gadget = @cat.gadgets.find_by(id: params[:id])
         @gadget = Gadget.find(params[:id])
         render json: @gadget
     end 
 
    def create
-
+        @gadget = @cat.gadgets.new(gadget_params)
+            if @gadget.save
+                render json: @gadget
+            else
+                render json: {error: 'Error creating gadget'}
+            end
    end
 
    def destroy
