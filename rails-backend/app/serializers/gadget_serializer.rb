@@ -1,3 +1,3 @@
 class GadgetSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :image_url, :description, :link
 end
