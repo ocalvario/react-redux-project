@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2020_08_08_212752) do
   create_table "cats", force: :cascade do |t|
     t.string "name"
     t.string "image_url"
+    t.string "country"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
