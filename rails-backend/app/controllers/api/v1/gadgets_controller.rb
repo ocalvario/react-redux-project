@@ -10,16 +10,18 @@ class Api::V1::GadgetsController < ApplicationController
     if @gadget.save
         render json: @gadget
     else
-        render json: {error: 'Error creating account'}
+        render json: {error: 'Error creating gadget'}
     end
    end
 
    def show
-
+    @gadget = Gadget.find(params[:id])
+    render json: @gadget
    end 
 
    def destroy
-
+    @gadget = Gadget.find(params[:id])
+    @gadget.destroy
    end 
 
    private
