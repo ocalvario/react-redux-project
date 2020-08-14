@@ -3,6 +3,8 @@ import React from 'react'
 
 class CatInput extends React.Component {
 
+    state = { name: '', im,age_url: '', description: '', link: ''}
+
     render() {
         return (
             <div>
