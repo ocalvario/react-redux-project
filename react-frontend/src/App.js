@@ -1,18 +1,29 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import CatsContainer from './containers/CatsContainer'
+import {fetchCats} from './actions/fetchCats';
 
 class App extends React.Component {
   
+  componentDidMount() {
+    // fetch ('http://localhost:3000/api/v1/cats')
+    // .then(resp => resp.json())
+    // .then(data => console.log(data))
+  }
 
   render() {
     return (
       <div className="App">
-       <CatsContainer/>
+      App
       </div>
     );
   }  
 
 }
  
-export default App;
+// const mapStateToProps = (state) => {
+//   return {
+//     cats: state.cats
+//   }
+// }
+
+export default connect(null, {fetchCats} )(App);
