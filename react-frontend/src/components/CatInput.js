@@ -1,4 +1,6 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {addCat} from '../actions/addCat'
 
 
 class CatInput extends React.Component {
@@ -11,16 +13,22 @@ class CatInput extends React.Component {
         })
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.props.addCat(this.state)
+    }
+
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit = {this.handleSubmit}>
                    <label>Name: </label>
                    <input type="text" placeholder="Name" value={this.state.name} name="name" onChange ={this.handleChange} /> <br></br>
                    <label>Image Url: </label>
                    <input type="text" placeholder="Image Url" value={this.state.image_url} name="image_url" onChange ={this.handleChange} /> <br></br>
                    <label>Description: </label>
                    <input type="text" placeholder="Country" value={this.state.country} name="country" onChange ={this.handleChange} /> <br></br>
+                   <input type="submit" />
                 </form>  
                 <br></br>
             </div>
@@ -29,4 +37,4 @@ class CatInput extends React.Component {
 
 }
 
-export default CatInput
+export default connect(null, {addCat})(CatInput)
