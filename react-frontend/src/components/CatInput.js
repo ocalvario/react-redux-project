@@ -16,6 +16,9 @@ class CatInput extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addCat(this.state)
+        this.setState({
+            name: '', image_url: '', country: '' 
+        })
     }
 
     render() {
