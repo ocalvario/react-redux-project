@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {Route} from 'react-router-dom' 
 
 import {fetchCats} from '../actions/fetchCats'
 import Cats from '../components/Cats'
@@ -14,7 +15,7 @@ class CatsContainer extends React.Component {
     render() {
         return ( 
             <div>
-                <CatInput/>
+                <Route path='/cats/new' component={CatInput} />
                 <Cats cats={this.props.cats}/>
             </div>
         )
