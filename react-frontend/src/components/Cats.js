@@ -1,11 +1,12 @@
 import React from 'react'
-
+import Cat from './Cat'
 
 const Cats = (props) => {
 
     return (
         <div>
-            {props.cats.map(cat  => <li> key={cat.id } {cat.name} - {cat.country} </li> )}
+            {props.cats.map(cat  => 
+                <div  key={cat.id}> <Cat cat={cat} /> </div> )}
         </div>
     )
 }
