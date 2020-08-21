@@ -4,6 +4,7 @@ import {Route} from 'react-router-dom'
 
 import {fetchCats} from '../actions/fetchCats'
 import Cats from '../components/Cats'
+import Cat from '../components/Cat'
 import CatInput from '../components/CatInput'
 
 class CatsContainer extends React.Component {
@@ -16,7 +17,8 @@ class CatsContainer extends React.Component {
         return ( 
             <div>
                 <Route path='/cats/new' component={CatInput} />
-                <Cats cats={this.props.cats}/>
+                <Route path='/cats/:id' render={(routerProps) => <Cat {...routerProps} cats={this.props.cats}/>} />
+                <Route exact path='/cats' render={(routerProps) => <Cats {...routerProps} cats={this.props.cats}/>} />
             </div>
         )
     }

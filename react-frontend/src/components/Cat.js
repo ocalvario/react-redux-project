@@ -2,9 +2,12 @@
 
  const Cat = (props) => {
 
+    let cat = props.cats[props.match.params.id - 1]
+    console.log(cat)
+
     return (
         <li>
-            {props.cat.name} - {props.cat.country}
+            {cat ? cat.name : null} - {cat ? cat.country : null} 
         </li>
     )
 
