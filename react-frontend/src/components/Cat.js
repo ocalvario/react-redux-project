@@ -2,8 +2,10 @@
 
  const Cat = (props) => {
 
+    console.log(props)
+
     let cat = props.cats[props.match.params.id - 1]
-    console.log(cat)
+    // console.log(cat)
 
     return (
         <li>
