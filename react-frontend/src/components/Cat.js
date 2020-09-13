@@ -1,16 +1,15 @@
  import React from 'react'
+ import {Redirect} from 'react-router-dom'
 
  const Cat = (props) => {
 
-    console.log(props)
-
     let cat = props.cats[props.match.params.id - 1]
-    // console.log(cat)
 
     return (
-        <li>
+        <h2>
             {cat ? cat.name : null} - {cat ? cat.country : null} 
-        </li>
+        </h2>
+        
     )
 
  }

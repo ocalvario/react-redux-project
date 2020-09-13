@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Route} from 'react-router-dom' 
-
+import {Route, Switch} from 'react-router-dom' 
 import {fetchCats} from '../actions/fetchCats'
 import Cats from '../components/Cats'
 import Cat from '../components/Cat'
@@ -16,9 +15,11 @@ class CatsContainer extends React.Component {
     render() {
         return ( 
             <div>
-                <Route path='/cats/new' component={CatInput} />
-                <Route path='/cats/:id' render={(routerProps) => <Cat {...routerProps} cats={this.props.cats}/>} />
-                <Route exact path='/cats' render={(routerProps) => <Cats {...routerProps} cats={this.props.cats}/>} />
+                <Switch>
+                    <Route path='/cats/new' component={CatInput} />
+                    <Route path='/cats/:id' render={(routerProps) => <Cat {...routerProps} cats={this.props.cats}/>} />
+                    <Route exact path='/cats' render={(routerProps) => <Cats {...routerProps} cats={this.props.cats}/>} />
+                </Switch>
             </div>
         )
     }

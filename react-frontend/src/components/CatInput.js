@@ -17,7 +17,7 @@ class CatInput extends React.Component {
         event.preventDefault()
         this.props.addCat(this.state)
         this.setState({
-            name: '', image_url: '', country: '' 
+            name: '', image_url: '', country: ''  
         })
     }
 
