@@ -4,6 +4,19 @@ import {connect} from 'react-redux'
 
 class GadgetInput extends React.Component {
 
+    state = {
+       name: '',
+       image_url: '',
+       description: '',
+       link: '' 
+    }
+
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
     render() {
         return (
             <div>
