@@ -4,7 +4,9 @@ const Gadgets = (props) => {
 
     return (
         <div>
-            Gadgets
+            {props.gadgets && props.gadgets.map(gadget => 
+                <li key={gadget.id}> {gadget.name} - {gadget.description} </li>
+                )}
         </div>
     )
 
