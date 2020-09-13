@@ -12,7 +12,7 @@
             <h2>
                 {cat ? cat.name : null} - {cat ? cat.country : null} 
             </h2>
-            <GadgetsContainer/>
+            <GadgetsContainer cat={cat} />
         </div>
         
     )

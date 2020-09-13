@@ -9,7 +9,7 @@ render() {
     return (
         <div>
             <GadgetInput/>
-            <Gadgets/>
+            <Gadgets gadgets={this.props.gadget && this.props.cat.gadgets} />
         </div>
 
     )
