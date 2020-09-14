@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {addGadget} from '../actions/addGadget'
 
 
 class GadgetInput extends React.Component {
@@ -17,10 +18,21 @@ class GadgetInput extends React.Component {
         })
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.props.addGadget(this.state, this.props.cat.id)
+        this.setState({
+            name: '',
+            image_url: '',
+            description: '',
+            link: '' 
+        })
+    }
+
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>Name:</label>
                     <input type="text" name="name" value={this.state.name} onChange={this.handleChange} /> <br></br>
                     <label>Image:</label>   
@@ -29,7 +41,9 @@ class GadgetInput extends React.Component {
                     <input type="text" name="description" value={this.state.description} onChange={this.handleChange} /> <br></br>
                     <label>Link:</label>
                     <input type="text" name="link" value={this.state.link} onChange={this.handleChange} /> <br></br>
+                    <input type="submit"/>
                     <br></br>
+
                 </form>
             </div>
         )
@@ -38,4 +52,4 @@ class GadgetInput extends React.Component {
 
 }
 
-export default connect(null)(GadgetInput)
+export default connect(null, {addGadget} )(GadgetInput)
