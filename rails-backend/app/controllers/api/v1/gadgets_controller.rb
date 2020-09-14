@@ -15,7 +15,7 @@ class Api::V1::GadgetsController < ApplicationController
    def create
         @gadget = @cat.gadgets.new(gadget_params)
             if @gadget.save
-                render json: @gadget
+                render json: @cat
             else
                 render json: {error: 'Error creating gadget'}
             end
