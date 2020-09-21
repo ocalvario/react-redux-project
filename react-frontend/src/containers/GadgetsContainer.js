@@ -8,7 +8,7 @@ class GadgetsContainer extends React.Component {
 render() {
     return (
         <div>
-            <GadgetInput/>
+            <GadgetInput cat={this.props.cat}/>
             <Gadgets gadgets={this.props.cat && this.props.cat.gadgets} />
         </div>
 
