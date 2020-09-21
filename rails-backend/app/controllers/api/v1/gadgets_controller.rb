@@ -22,7 +22,10 @@ class Api::V1::GadgetsController < ApplicationController
    end
 
    def destroy
-
+        @gadget = Gadget.find(params["id"])
+        @cat = Cat.find(@gadget.cat_id)
+        @gadget.destroy
+        render json: @cat
    end 
 
    private
