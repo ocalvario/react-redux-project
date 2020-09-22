@@ -1,5 +1,6 @@
  import React from 'react'
- import {Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
+import CatEdit from './CatEdit'
 
  import GadgetsContainer from '../containers/GadgetsContainer'
 
@@ -13,6 +14,7 @@
                 {cat ? cat.name : null} - {cat ? cat.country : null} 
             </h2>
             <GadgetsContainer cat={cat} />
+            <CatEdit cat={cat} />
         </div>
         
     )
