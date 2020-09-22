@@ -24,6 +24,13 @@ class Api::V1::CatsController < ApplicationController
     @cat.destroy
    end 
 
+   def update
+    @cat = Cat.find(params[:id])
+    @cat.update(name: params["cat"]["name"])
+    @cat.save
+    render json: @cat
+   end
+
    private
 
    def cat_params
