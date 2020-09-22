@@ -22,7 +22,16 @@ export default function catReducer(state = {cats: []}, action) {
                 return cat
             }
         })
-        return {...state, cats: catsTwo } 
+        return {...state, cats: catsTwo }
+        case 'EDIT_CAT':
+            let catsThree = state.cats.map(cat => {
+                if (cat.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return cat
+                }
+            })
+            return {...state, cats: catsThree }   
         default:
          return state
     }
