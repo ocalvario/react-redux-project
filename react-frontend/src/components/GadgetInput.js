@@ -33,16 +33,30 @@ class GadgetInput extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Name:</label>
-                    <input type="text" name="name" value={this.state.name} onChange={this.handleChange} /> <br></br>
-                    <label>Image:</label>   
-                    <input type="text" name="image_url" value={this.state.image_url} onChange={this.handleChange} /> <br></br>
-                    <label>Description:</label>
-                    <input type="text" name="description" value={this.state.description} onChange={this.handleChange} /> <br></br>
-                    <label>Link:</label>
-                    <input type="text" name="link" value={this.state.link} onChange={this.handleChange} /> <br></br>
+                    <h4>Add a new gadget:</h4>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><label>Name:</label> </td>
+                                <td><input type="text" name="name" value={this.state.name} onChange={this.handleChange} /> </td>
+                            </tr>
+                            <tr>
+                                <td> <label>Image:</label> </td>
+                                <td> <input type="text" name="image_url" value={this.state.image_url} onChange={this.handleChange} /> </td>
+                            </tr>
+                            <tr>
+                                <td> <label>Description:</label> </td>
+                                <td>   <input type="text" name="description" value={this.state.description} onChange={this.handleChange} /> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Link:</label></td>
+                                <td><input type="text" name="link" value={this.state.link} onChange={this.handleChange} /> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br/>
                     <input type="submit"/>
-                    <br></br>
+                    <br/> <br/>
 
                 </form>
             </div>

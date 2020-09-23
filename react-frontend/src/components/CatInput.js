@@ -24,14 +24,27 @@ class CatInput extends React.Component {
     render() {
         return (
             <div>
+                <h2>Add a new cat</h2>
                 <form onSubmit = {this.handleSubmit}>
-                   <label>Name: </label>
-                   <input type="text" placeholder="Name" value={this.state.name} name="name" onChange ={this.handleChange} /> <br></br>
-                   <label>Image Url: </label>
-                   <input type="text" placeholder="Image Url" value={this.state.image_url} name="image_url" onChange ={this.handleChange} /> <br></br>
-                   <label>Description: </label>
-                   <input type="text" placeholder="Country" value={this.state.country} name="country" onChange ={this.handleChange} /> <br></br>
-                   <input type="submit" />
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><label>Name: </label></td>
+                                <td><input type="text" placeholder="Name" value={this.state.name} name="name" onChange ={this.handleChange} /> </td>
+                            </tr>
+                            <tr>
+                                <td><label>Image Url: </label> </td>
+                                <td><input type="text" placeholder="Image Url" value={this.state.image_url} name="image_url" onChange ={this.handleChange} /> </td>
+                            </tr>
+                            <tr>
+                                <td> <label>Description: </label> </td>
+                                <td><input type="text" placeholder="Country" value={this.state.country} name="country" onChange ={this.handleChange} /> </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                        <br></br>
+                        <input type="submit" />
+                  
                 </form>  
                 <br></br>
             </div>
