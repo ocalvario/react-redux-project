@@ -12,8 +12,12 @@ const Gadgets = (props) => {
 
     return (
         <div>
+            <h2>Gadget List:</h2>
             {props.gadgets && props.gadgets.map(gadget => 
-                <li key={gadget.id}> {gadget.name} - {gadget.description}  <button onClick={() => handleDelete(gadget)}>Delete</button></li>
+                <ol key={gadget.id}> <h3><a href={gadget.link}>{gadget.name}</a></h3>
+                 <img src={gadget.image_url} height="150" width="150"></img> <br/>
+                 {gadget.description} <br/><br/>  
+                 <button onClick={() => handleDelete(gadget)}>Delete</button></ol>
                 )}
         </div>
     )

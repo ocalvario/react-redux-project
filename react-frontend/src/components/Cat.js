@@ -10,11 +10,13 @@ import CatEdit from './CatEdit'
 
     return (
         <div>
-            <h2>
-                {cat ? cat.name : null} - {cat ? cat.country : null} 
-            </h2>
-            <GadgetsContainer cat={cat} />
+            <h1>
+                {cat ? cat.name : null} - {cat ? cat.country : null} <br/>
+                <img src={cat ? cat.image_url : null} height="200" width="200"></img>
+            </h1>
             <CatEdit cat={cat} />
+            <GadgetsContainer cat={cat} />
+            
         </div>
         
     )
