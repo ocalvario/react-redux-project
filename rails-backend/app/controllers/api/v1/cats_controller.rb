@@ -26,7 +26,7 @@ class Api::V1::CatsController < ApplicationController
 
    def update
     @cat = Cat.find(params[:id])
-    @cat.update(name: params["cat"]["name"])
+    @cat.update(name: params["cat"]["name"], image_url: params["cat"]["image_url"], country: params["cat"]["country"])
     @cat.save
     render json: @cat
    end
