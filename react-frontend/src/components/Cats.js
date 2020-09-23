@@ -6,11 +6,16 @@ const Cats = (props) => {
 
     return (
         <div>
+            <h2>Cat Directory:</h2>
             {props.cats.map(cat  => 
-                <li  key={cat.id}> 
+                <ol  key={cat.id}> 
+                <img src={cat.image_url} height="25" width="25"></img>
                 <Link to={`/cats/${cat.id}`}> {cat.name} </Link> 
-                </li> )}
+                </ol> )}
+                <br></br>
         </div>
+
+                
     )
 }
 
