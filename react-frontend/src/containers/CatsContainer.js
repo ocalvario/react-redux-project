@@ -5,6 +5,8 @@ import {fetchCats} from '../actions/fetchCats'
 import Cats from '../components/Cats'
 import Cat from '../components/Cat'
 import CatInput from '../components/CatInput'
+import NavigationBar from '../components/NavigationBar'
+import Footer from '../components/Footer'
 
 class CatsContainer extends React.Component {
 
@@ -15,6 +17,9 @@ class CatsContainer extends React.Component {
     render() {
         return ( 
             <div>
+                <NavigationBar/>
+                <Footer/>
+                
                 <Switch>
                     <Route path='/cats/new' component={CatInput} />
                     <Route path='/cats/:id' render={(routerProps) => <Cat {...routerProps} cats={this.props.cats}/>} />
