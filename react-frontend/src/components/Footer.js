@@ -7,8 +7,7 @@ const Footer = () => {
   return (
     <div className="App">
         <div className="footer">
-        Other Cool Cats: <Link to='/cats' style={{paddingRight: '10px'}}>Instagram  </Link>
-        More Gadgets: <Link to='/cats/new'> Amazon</Link>
+        Find Your Own Cool Cat @ <a href='https://www.aspca.org/adopt-pet/adoptable-cats-your-local-shelter'>ASPCA  </a>
         </div>
     </div>
 

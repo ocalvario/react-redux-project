@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addCat} from '../actions/addCat'
-
+import '../App.css'
 
 class CatInput extends React.Component {
 
@@ -23,30 +23,34 @@ class CatInput extends React.Component {
 
     render() {
         return (
-            <div>
-                <h2>Add a new cat</h2>
-                <form onSubmit = {this.handleSubmit}>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td><label>Name: </label></td>
-                                <td><input type="text" placeholder="Name" value={this.state.name} name="name" onChange ={this.handleChange} /> </td>
-                            </tr>
-                            <tr>
-                                <td><label>Image Url: </label> </td>
-                                <td><input type="text" placeholder="Image Url" value={this.state.image_url} name="image_url" onChange ={this.handleChange} /> </td>
-                            </tr>
-                            <tr>
-                                <td> <label>Description: </label> </td>
-                                <td><input type="text" placeholder="Country" value={this.state.country} name="country" onChange ={this.handleChange} /> </td>
-                            </tr>
-                        </tbody>
-                        </table>
-                        <br></br>
-                        <input type="submit" />
-                  
-                </form>  
-                <br></br>
+            <div className="App">
+                <div className="edit" >
+                    <h3 className="kittys">Add a new cat</h3>
+                    <form onSubmit = {this.handleSubmit}>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><label>Name: </label></td>
+                                    <td><input type="text" placeholder="Name" value={this.state.name} name="name" onChange ={this.handleChange} /> </td>
+                                </tr>
+                                <tr>
+                                    <td><label>Image Url: </label> </td>
+                                    <td><input type="text" placeholder="Image Url" value={this.state.image_url} name="image_url" onChange ={this.handleChange} /> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label>Description: </label> </td>
+                                    <td><input type="text" placeholder="Country" value={this.state.country} name="country" onChange ={this.handleChange} /> </td>
+                                </tr>
+                            </tbody>
+                            </table>
+                            <br></br>
+                            <input type="submit" className="change"/>
+                    
+                    </form>  
+                    <br></br>
+
+                </div>
+
             </div>
         )
     }

@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addGadget} from '../actions/addGadget'
-
+import '../App.css'
 
 class GadgetInput extends React.Component {
 
@@ -31,31 +31,33 @@ class GadgetInput extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="App">
                 <form onSubmit={this.handleSubmit}>
-                    <h4>Add a new gadget:</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td><label>Name:</label> </td>
-                                <td><input type="text" name="name" value={this.state.name} onChange={this.handleChange} /> </td>
-                            </tr>
-                            <tr>
-                                <td> <label>Image:</label> </td>
-                                <td> <input type="text" name="image_url" value={this.state.image_url} onChange={this.handleChange} /> </td>
-                            </tr>
-                            <tr>
-                                <td> <label>Description:</label> </td>
-                                <td>   <input type="text" name="description" value={this.state.description} onChange={this.handleChange} /> </td>
-                            </tr>
-                            <tr>
-                                <td><label>Link:</label></td>
-                                <td><input type="text" name="link" value={this.state.link} onChange={this.handleChange} /> </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <br/>
-                    <input type="submit"/>
+                    <div className="edit">
+                        <h3 className="kittys">Add Gadget:</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><label>Name:</label> </td>
+                                    <td><input type="text" name="name" value={this.state.name} onChange={this.handleChange} /> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label>Image:</label> </td>
+                                    <td> <input type="text" name="image_url" value={this.state.image_url} onChange={this.handleChange} /> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label>Description:</label> </td>
+                                    <td>   <input type="text" name="description" value={this.state.description} onChange={this.handleChange} /> </td>
+                                </tr>
+                                <tr>
+                                    <td><label>Link:</label></td>
+                                    <td><input type="text" name="link" value={this.state.link} onChange={this.handleChange} /> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <input type="submit" className="change"/>
+                    </div>
                     <br/> <br/>
 
                 </form>

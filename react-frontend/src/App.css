@@ -1,9 +1,110 @@
+body {
+  background-image: url(https://monikazagrobelna.com/wp-content/uploads/2019/07/draw-cats-done-4.jpg?resize=800%2C774);
+}
+
+.block {
+  background-color: #f1f8e9;
+  width: 750px;
+  margin: 0 auto;
+}
+
+.links {
+  color: black;
+}
+
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
+    background-color: #33691e;
     color: white;
     text-align: center;
+    font-size: 18px;
+    padding: 5px 5px 5px 5px;
   }
+
+.navbar {
+  text-align: center;
+  background-color: #33691e;
+  font-variant-caps: petite-caps;
+  font-size: 24px;
+  color: white;
+  padding: 4px 4px 4px 4px;
+}
+
+a:visited {
+  color: white;
+}
+
+.cayat {
+  color: white;
+  background-color: #2F4F4F;
+  padding: 5px 5px 5px 5px;
+}
+
+.edit {
+  width: 300px;
+  background-color: #20B2AA;
+  color: white;
+}
+.kittys {
+  font-style: italic;
+  background-color: #2E8B57;
+  text-align: center;
+  padding: 3px 3px 3px 3px;
+}
+
+.gadtitle {
+  background-color:#006600;
+  color: white;
+  padding: 5px 5px 5px 5px;
+}
+
+.toys {
+  background-color: #f1f8e9;
+}
+
+.new {
+  text-decoration: underline;
+}
+
+.directory {
+  text-transform: uppercase;
+  color: white;
+  background-color: #37474f;
+  padding: 5px 5px 5px 5px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.list {
+  background-color: #008080;
+  padding: 5px 5px 5px 5px;
+  width: 300px;
+  font-size: 18px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.delete {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.change {
+  background-color: #32cd32; 
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
