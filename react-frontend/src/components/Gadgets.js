@@ -17,6 +17,7 @@ const Gadgets = (props) => {
                     {props.gadgets && props.gadgets.map(gadget => 
                     <ol key={gadget.id}> <h3><a href={gadget.link}>{gadget.name}</a></h3>
                     <img src={gadget.image_url} height="150" width="150"></img> <br/>
+                    <img src={gadget.image_url} height="150" width="150" alt=""></img> <br/>
                     {gadget.description} <br/><br/>  
                     <button onClick={() => handleDelete(gadget)} className="delete">Delete</button></ol>
                     )}

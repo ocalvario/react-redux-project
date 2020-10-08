@@ -12,6 +12,7 @@ const Cats = (props) => {
                 {props.cats.map(cat  => 
                     <ol  key={cat.id} className="list"> 
                     <img src={cat.image_url} height="75" width="75"></img>
+                    <img src={cat.image_url} height="75" width="75" alt=""></img>
                     <Link to={`/cats/${cat.id}`}> {cat.name} </Link> 
                     <br/><br/>
                     </ol> )}

@@ -15,6 +15,7 @@ import '../App.css'
                 <h1 className="cayat">
                     {cat ? cat.name : null} - {cat ? cat.country : null} </h1> <br/>
                     <img src={cat ? cat.image_url : null} height="200" width="200"></img>
+                    <img src={cat ? cat.image_url : null} height="200" width="200" alt=""></img>
                 
                 <CatEdit cat={cat} />
                 <GadgetsContainer cat={cat} />
