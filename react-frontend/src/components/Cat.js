@@ -1,5 +1,4 @@
- import React from 'react'
-import {Redirect} from 'react-router-dom'
+import React from 'react'
 import CatEdit from './CatEdit'
 import '../App.css'
 
@@ -14,7 +13,6 @@ import '../App.css'
             <div className="block">
                 <h1 className="cayat">
                     {cat ? cat.name : null} - {cat ? cat.country : null} </h1> <br/>
-                    <img src={cat ? cat.image_url : null} height="200" width="200"></img>
                     <img src={cat ? cat.image_url : null} height="200" width="200" alt=""></img>
                 
                 <CatEdit cat={cat} />
